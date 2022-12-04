@@ -1,4 +1,4 @@
-/*=========COMMON*/
+/*=========COMMON=========*/
 @font-face {
     font-family: "OpenSans Regular";
     src: url("../fonts/OpenSans-Regular.woff");
@@ -20,6 +20,8 @@
     margin: 0;
     padding: 0;
   }
+
+
     /*=========POPUP===========*/
 
 .popup {
@@ -30,12 +32,11 @@
   padding-bottom: 50px;
   
   background-color: rgba(0, 0, 0, 0.75);
-
   
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   z-index: 2;
   justify-content: center;
   align-items: baseline;
@@ -59,7 +60,8 @@
   background-color: #ffffff;
   position: relative;
   z-index: 2;
-}    
+}  
+
 .feedback__title {
     font-family: OpenSans Bold;
     color: #0f0d0e;
@@ -75,10 +77,10 @@
     width: 66px;
     height: 3px;
     background: #b59f5b;
-    text-align: center;
-  
     margin: 12px auto 27px;
     padding:0;
+
+    text-align: center;    
   }
 
 .select {
@@ -88,7 +90,6 @@
     height: 48px;
      
     padding-left: 19px;
-      
     margin: 10px 0 0 0;
 
     border: none;
@@ -110,7 +111,7 @@
     
 .select:focus {
     outline: 1px solid #b59f5b;
-  }
+}
 
   .radio {
     -webkit-appearance: none; 
@@ -206,6 +207,8 @@
   width: 1.4em;
   height: 0.2em;
 }
+
+
   /*=========HEADER==========*/
   .header {
     position: relative;
@@ -302,6 +305,7 @@
   .trend_container {
     width: 100%;
   }
+
   .trend__title {
     font-family: OpenSans Bold;
     color: #0f0d0e;
@@ -333,6 +337,7 @@
     margin: 0;
     padding: 0;
   }
+
   .article__container {
     display: flex;
     flex-wrap: nowrap;
@@ -392,6 +397,7 @@
   }
 
   /*====MAIN====*/
+  
   .container__main {
     display: flex;
     flex-direction: row;
@@ -402,12 +408,15 @@
     margin: 60px auto 0;
     padding: 0 15px;
   }
+
   .main {
     width: 780px;
   }
+
   .side {  
     width: 272px;
   }
+
   .section {
     padding: 0;
     
