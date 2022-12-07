@@ -32,14 +32,17 @@
   padding-bottom: 50px;
   
   background-color: rgba(0, 0, 0, 0.75);
-  
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
   z-index: 2;
   justify-content: center;
   align-items: baseline;
+}
+
+.hide {
+  display: none;
 }
 
 .frequency {
@@ -258,12 +261,13 @@
   }
   
   .logo__img {
-    width: 149px;
+    min-width: 149px;
   }
   
   .menu {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
     list-style-type:none; 
     align-items: center;
@@ -337,6 +341,9 @@
     margin: 0;
     padding: 0;
   }
+  .content__title:hover {
+    color: #b59f5b;
+  }
 
   .article__container {
     display: flex;
@@ -374,26 +381,34 @@
 
   .garden {
     background-image: url("../images/trend1.jpg");
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .cheese {
     background-image: url("../images/trend2.jpg");
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .mountains {
     background-image: url("../images/trend3.jpg");
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .vitamin {
     background-image: url("../images/trend4.jpg");
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .trend__content {
     border: 3px solid #857b54;
+    padding: 35px 30px 8px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   /*====MAIN====*/
@@ -433,8 +448,9 @@
     padding: 0;
   }
   .post__image {
-    width: 381px;
+    min-width: 381px;
     object-fit: cover;
+    
     margin: 0;
     padding: 0;
   }
@@ -446,6 +462,7 @@
   .links__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style-type:none; 
     align-items: center;
     
@@ -560,7 +577,7 @@
   }
   
   .preview__img {
-    width: 70px;
+    min-width: 70px;
   }
   .aside__section {
     display: flex;
