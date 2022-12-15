@@ -25,6 +25,7 @@
     /*=========POPUP===========*/
 
 .popup {
+  max-width: 1200px;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -32,6 +33,7 @@
   padding-bottom: 50px;
   
   background-color: rgba(0, 0, 0, 0.75);
+  background-size: 100%;
   display: flex;
   position: fixed;
   top: 0;
@@ -200,7 +202,7 @@
 
 .popup__close {
   width: 1.5em;
-
+  
   position: absolute;
   top: -1.5em;
   right: 0;  
@@ -213,6 +215,7 @@
 
 
   /*=========HEADER==========*/
+
   .header {
     position: relative;
     z-index: 1;
@@ -241,7 +244,7 @@
   }
   
   .contain-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin:0 auto;
     padding: 0 15px;
     position: relative;
@@ -279,7 +282,53 @@
     margin: 0;
     padding: 0;
   }
+
+  .menu__button {
+    width: 1.4em;
+    height: 1em;  
+    border: none;
+    padding: 0;
   
+    background-color: transparent;
+    font-size: 25px;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+
+  .menu__button:before, .menu__button:after {
+    content:"";
+    width: 100%;
+    height: 20%;
+  
+    border-radius: 5px;
+    background-color: #ffffff;  
+  
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu__button:before {
+    top: 0;
+  }
+  
+  .menu__button:after {
+    bottom: 0;
+  }
+
+  .menu__button-label {
+    width: 100%;
+    height: 20%;
+    margin-top: -0.1em;  
+  
+    border-radius: 5px;
+    background-color: #ffffff;  
+  
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
   .submenu {
     margin-left: 35px;
   }
@@ -425,7 +474,8 @@
   }
 
   .main {
-    width: 780px;
+    width: calc(100% - 272px);
+    padding-right: 35px;
   }
 
   .side {  
@@ -456,7 +506,7 @@
   }
   
   .section__container {
-    margin: 0 0 0 30px;
+    margin: 0;
     width: 367px;
   }
   .links__list {
@@ -841,8 +891,6 @@
     padding: 0 20px;
   }
 
-
-
   .shop_resume {
     display: flex;
     flex-direction: row;
@@ -976,4 +1024,81 @@
     justify-content: center;
   
     margin: 0 0 40px 0;
+  }
+
+  /****=====TABLET====****/
+  @media (min-width: 1200px) {
+    .menu__button {
+      display: none;
+    }
+  }
+  @media (max-width: 1199px) {
+    .menu {
+      display: none;
+    }      
+  }
+    
+  @media (min-width: 641px) and (max-width: 1199px) {
+    .header {
+      background-image: url("../images/banner-bg-tablet.jpg");
+      padding: 35px;
+    }
+    .trend_section {
+      width: calc((100% - 15px)/2);
+    }
+
+    .trend_section:nth-child(n+3) {
+      margin-top: 3px;
+    }
+    .article__container {
+      flex-wrap: wrap;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .section__container {
+      width: 100%;
+    }
+    .post__image {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .shop_item {      
+      width: calc((100% - 135px)/2);
+    }
+    .sales_container {
+      display: flex;
+     
+      flex-wrap: wrap;
+      padding: 0 35px;;
+    }
+    .shop_item:nth-child(n+3) {
+      margin-top: 100px;
+    }
+    .site__name {
+      font-size: 40px;
+    }
+    .section__title, .content__title {
+      font-size: 17px;
+    }
+    .sales__title, .trend__title, .feedback__title {
+      font-size: 18px;
+    }
+    .popup__close {
+      width: 2em;
+      height: 26px;
+      top: -2.75em;
+    }
+    .popup__close:before, .popup__close:after {
+      width: 2em;
+      
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    .trend_section {
+      width: calc((100% - 15px)/4);
+    }
   }
