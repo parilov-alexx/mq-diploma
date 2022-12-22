@@ -152,8 +152,7 @@
 }
 
 .field_textarea {
-  max-width: 330px;
-  min-width: 330px;
+  width: 100%;
   min-height: 130px;
   background-color: #f4f7f6;
   border: none;
@@ -493,12 +492,12 @@
     margin: 0 0 60px;
   }
   
-  .image__container {
+  .image__container, .image_container {
     margin: 0;
     padding: 0;
   }
   .post__image {
-    min-width: 381px;
+    
     object-fit: cover;
     
     margin: 0;
@@ -958,7 +957,7 @@
 
   /*===FOOTER===*/
   .footer {
-     width: 1170px;
+    min-width: 1170px;
     box-sizing: border-box;
     margin: 60px auto;
     padding: 0 245px;
@@ -1038,13 +1037,14 @@
     }      
   }
     
-  @media (min-width: 641px) and (max-width: 1199px) {
+  @media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
     .header {
       background-image: url("../images/banner-bg-tablet.jpg");
       padding: 35px;
     }
     .trend_section {
       width: calc((100% - 15px)/2);
+      padding: 15px 20px;
     }
 
     .trend_section:nth-child(n+3) {
@@ -1092,13 +1092,182 @@
       top: -2.75em;
     }
     .popup__close:before, .popup__close:after {
-      width: 2em;
-      
+      width: 2em;  
     }
+
+    .footer {
+      width: calc(100% - 70px);
+      padding: 0;
+      min-width: 360px;
+      margin: 0 35px;
+    }
+
+    
   }
 
   @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
     .trend_section {
       width: calc((100% - 15px)/4);
+    }
+  }
+
+  @media (max-width: 641px) and (orientation: portrait) {
+    .trend_section {
+      width: 100%;
+    }
+
+    .trend_section:nth-child(n+3) {
+      margin-top: 3px;
+    }
+
+    .trend_section:not(:last-child) {
+      margin-right: 0px;
+    }
+
+    .article__container {
+      flex-direction: column;
+    }
+
+    .header {
+      background-image: url("../images/banner-mobile.jpg");
+      padding: 15px;
+    }
+
+    .container {
+      flex-direction: column-reverse;
+      align-items: flex-end
+    }
+
+    .logo__img {
+      min-width: 270px;
+    }
+
+    .menu__button {
+      width: 1em;
+      height: 0.8em;
+      margin-bottom: 180px;
+    }  
+
+    .site__name {
+      font-size: 26px;
+      padding: 35px 0 215px;
+    }
+
+    .contain-wrapper {
+      padding: 30px 0;
+    }
+    .logo {
+      margin: auto;
+    }
+
+    .container__main, .section {
+      flex-direction: column;
+    }
+
+    .container__main {
+      width: 100%;
+      max-width: 640px;
+      margin: 45px 0;
+      padding: 0;
+    }
+
+    .post__image {
+      max-width: 640px;
+    }
+
+    .main {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    .section, .image__container, .post__image, .section__container, .section__content, .side {
+    width: 100%;
+    }
+
+    .section:last-child {
+    margin: 0 0 60px;
+    }
+    .side {
+    padding: 0 15px;
+    }
+
+    .sales_container {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .shop_item {
+      width: calc(100% - 70px);
+      min-width: 360px;
+      margin-left: 35px;
+      margin-right: 35px;
+          }
+
+    .item_description {
+      outline-offset: 5.6%;
+    }
+
+    .shop_item:not(:first-child) {
+      margin-top: 70px;
+    }
+
+    .footer {
+      width: calc(100% - 30px);
+      padding: 0;
+      min-width: 360px;
+      margin: 0 15px;
+    }
+
+    .field {
+      width: 100%;
+    }
+    .search-group {
+      width: 100%;
+    }
+    body {
+      min-width: 360px;
+    }
+
+    .sales__title, .trend__title, .feedback__title, .side__title, .content__title, .section__title {
+      font-size: 16px;
+    }
+
+    .section__text, .section__content {
+      font-size: 14px;
+    }
+
+    .item_title {
+      font-size: 17px;
+    }
+
+    .popup__container {
+      padding: 50px 15px;
+      width: calc(100% - 30px);
+      max-width: 610px;
+    }
+    .popup__close:before, .popup__close:after {
+      width: 2.15em;  
+    }
+  }
+
+  @media (max-width: 640px) and (orientation: landscape) {
+    .trend_section {
+      width: calc((100% - 15px)/2);
+      padding: 15px 20px;
+    }
+
+    .trend_section:nth-child(n+3) {
+      margin-top: 3px;
+    }
+
+    .trend_section:nth-child(even) {
+      margin-left: 5px;
+    }
+    .article__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
     }
   }
