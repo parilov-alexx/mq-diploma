@@ -25,7 +25,6 @@
     /*=========POPUP===========*/
 
 .popup {
-  max-width: 1200px;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -505,7 +504,7 @@
   }
   
   .section__container {
-    margin: 0;
+    margin: 0 0 0 30px;
     width: 367px;
   }
   .links__list {
@@ -958,6 +957,7 @@
   /*===FOOTER===*/
   .footer {
     min-width: 1170px;
+    width: calc(100% - 70px);
     box-sizing: border-box;
     margin: 60px auto;
     padding: 0 245px;
@@ -1034,10 +1034,13 @@
   @media (max-width: 1199px) {
     .menu {
       display: none;
-    }      
+    } 
+    .section__container {
+      margin: 0;
+    }     
   }
     
-  @media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+  @media (min-width: 641px) and (max-width: 1199px) {
     .header {
       background-image: url("../images/banner-bg-tablet.jpg");
       padding: 35px;
@@ -1101,8 +1104,7 @@
       min-width: 360px;
       margin: 0 35px;
     }
-
-    
+  
   }
 
   @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
@@ -1111,12 +1113,12 @@
     }
   }
 
-  @media (max-width: 641px) and (orientation: portrait) {
+  @media (max-width: 641px) {
     .trend_section {
       width: 100%;
     }
 
-    .trend_section:nth-child(n+3) {
+    .trend_section:nth-child(n+2) {
       margin-top: 3px;
     }
 
