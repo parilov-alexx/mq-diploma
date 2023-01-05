@@ -153,6 +153,7 @@
 .field_textarea {
   width: 100%;
   min-height: 130px;
+  max-width: 100%;
   background-color: #f4f7f6;
   border: none;
   margin-top: 10px;
@@ -956,14 +957,13 @@
 
   /*===FOOTER===*/
   .footer {
-    min-width: 1170px;
-    width: calc(100% - 70px);
+    max-width: 1200px;
+    width: calc(100% - 30px);
     box-sizing: border-box;
-    margin: 60px auto;
+    margin: 0 auto;
     padding: 0 245px;
   
     background-color: #f4f7f6;
-    
   }
   
   .sm_container {
@@ -1050,6 +1050,11 @@
       padding: 15px 20px;
     }
 
+    .trend__content {
+      max-width: 100%;
+
+    }
+
     .trend_section:nth-child(n+3) {
       margin-top: 3px;
     }
@@ -1083,11 +1088,15 @@
     .site__name {
       font-size: 40px;
     }
-    .section__title, .content__title {
+    .section__title,  {
       font-size: 17px;
     }
+
+    .content__title, .list__item {
+      font-size: 1.5vw;
+    }
     .sales__title, .trend__title, .feedback__title {
-      font-size: 18px;
+      font-size: 17px;
     }
     .popup__close {
       width: 2em;
